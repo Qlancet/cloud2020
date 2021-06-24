@@ -1,0 +1,19 @@
+server:
+  port: 8001
+eureka:
+  instance:
+    hostname: localhsot_7002 #eureka服务端实例名称
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2 #心跳时间间隔,默认30
+    lease-expiration-duration-in-seconds: 5   #超时时间,默认90
+    instance-id: eureka-8001.com
+  client:
+    register-with-eureka: false #表示不像注册中心注册自己
+    fetch-registry: false #false表示自己就是注册中心，我的职责就是维护服务实例,并不区检索服务
+    service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://localhost:8001/eureka/
+
+  #server:
+    #enable-self-preservation:  false
+    #eviction-interval-timer-in-ms: 60000
