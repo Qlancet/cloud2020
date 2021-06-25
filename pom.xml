@@ -27,7 +27,7 @@
         <mybatis.spring.boot.verison>1.3.0</mybatis.spring.boot.verison>
     </properties>
 
-    <!-- dependencyManagement的作用是: 子模块继承后,锁定版本不需要写 groupId和version-->
+    <!-- dependencyManagement的作用是: 子模块继承后,锁定版本不需要写************* groupId和version-->
     <dependencyManagement>
         <dependencies>
             <!--spring boot 2.2.2-->
