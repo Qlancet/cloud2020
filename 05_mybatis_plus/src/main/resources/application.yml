@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/clouddb01?useUnicode=true&characterEncoding=utf8
+  application:
+    name: mybatisPlus
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto   #全局配置id自增长
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
+server:
+  port: 8005
